@@ -29,7 +29,8 @@
 <style>
   svg {
     width: 100%;
-    border: 1px dashed red;
+    cursor: pointer;
+    user-select: none;
   }
 
   /* Define the rotation animation */

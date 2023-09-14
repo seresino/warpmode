@@ -77,13 +77,13 @@
 </div>
 
 <div class="bio-bracket">
-  <div class="brackets">
+  <div class="brackets" on:click={toggleArtists}>
     <svg width="50" height="502" viewBox="0 0 50 502" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M31.72 501H1V1H31.72" stroke="white" stroke-width="2" stroke-miterlimit="10"/>
       <text transform="matrix(0 -1 1 0 20.0601 318.62)" fill="#FCFCFC" xml:space="preserve" style="white-space: pre" font-family="AUTHENTIC Sans" font-size="24" letter-spacing="0em"><tspan x="0" y="21.124">Bio</tspan></text>
     </svg>
   </div>
-  <div class="bio-container">
+  <div class="bio-container" style="width: {$width}vw;">
     <div class="bio">
       {displayedBio}
     </div>
@@ -93,7 +93,7 @@
       <a href="">Contact</a>
     </div>
   </div>
-  <div class="brackets">
+  <div class="brackets" on:click={toggleArtists}>
     <svg width="32" height="503" viewBox="0 0 32 503" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M0.27002 501.62H31V1.62012H0.27002" stroke="white" stroke-width="2" stroke-miterlimit="10"/>
     </svg>
@@ -108,6 +108,8 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    margin-top: 5%;
+    margin-bottom: 1%;
   }
 
   .artist-container {
@@ -141,10 +143,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-  }
-
-  .bio-bracket .brackets {
-    cursor: auto;
+    overflow: hidden;
+    margin-bottom: 5%;
   }
 
   .bio-container {
@@ -152,8 +152,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 80vw;
-    border: 1px dashed #aaa;
+    overflow: hidden;
   }
 
   .bio {
